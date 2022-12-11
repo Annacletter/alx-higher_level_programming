@@ -1,3 +1,4 @@
+
 #!/usr/bin/python3
 def uppercase(str):
     for c in str:
@@ -5,9 +6,3 @@ def uppercase(str):
             c = chr(ord(c) - (ord('a') - ord('A')))
         print("{:s}".format(c), end='')
     print("")
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Sec
