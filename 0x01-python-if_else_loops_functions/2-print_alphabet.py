@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 for lower in range(97, 123):
-    print(f"{chr(lower)}", end="")
+    print("%s" % chr(lower), end="")
