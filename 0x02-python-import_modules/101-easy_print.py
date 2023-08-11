@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-import python_cool
+__import__('python_cool').__doc__ += "#pythoniscool\n"
