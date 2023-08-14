@@ -16,7 +16,7 @@ int palindrome(listint_t *head, listint_t *temp, int len)
 
 	if (len <= 1)
 		return (1);
-	else if (head->number == temp->number)
+	else if (head->n == temp->n)
 	{
 		while (i < len - 2)
 		{
@@ -63,7 +63,7 @@ int last_number(listint_t *head, int len)
 		head = head->next;
 		i++;
 	}
-	return (head->number);
+	return (head->n);
 }
 /**
 * is_palindrome - Checks if a singly linked list is a palindrome.
