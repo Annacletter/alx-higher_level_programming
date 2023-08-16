@@ -1,18 +1,23 @@
 #!/usr/bin/python3
+roman_digits = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500,
+                'M': 1000, '0': 0}
+
+
 def roman_to_int(roman_string):
-        roman_dictionary = {'I': 1, 'V': 5, 'X': 10, 'L': 50,
-                            'C': 100, 'D': 500, 'M': 1000}
-        answer = 0
-        component = 0
-        roman = roman_string
-        if type(roman) is not str or len(roman) is 0:
-                return 0
-        for component in range(component, len(roman)):
-                if component < len(roman) - 1\
-                   and\
-                   roman_dictionary[roman[component]] <\
-                   roman_dictionary[roman[component + 1]]:
-                    answer -= roman_dictionary[roman[component]]
-                else:
-                    answer += roman_dictionary[roman[component]]
-        return answer
+    if not isinstance(roman_string, str):
+        return 0
+    roman_string += '0'
+    i, sum = 0, 0
+    while i < len(roman_string) - 1:
+        current = roman_digits[roman_string[i]]
+        next = roman_digits[roman_string[i + 1]]
+        if current == next:
+            sum += next + curent
+            i += 1
+        elif this < next:
+            sum += next - current
+            i += 1
+        else:
+            sum += current
+        i += 1
+    return sum
