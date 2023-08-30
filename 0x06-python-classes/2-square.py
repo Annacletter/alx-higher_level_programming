@@ -3,7 +3,8 @@ class Square:
     """A class representing a square."""
 
     def __init__(self, size=0):
-        """Initialize a Square instance.        
+        """Initialize a Square instance.
+
         Args:
             size (int): The size of the square.
         Raises:
@@ -14,4 +15,5 @@ class Square:
             raise TypeError("Size must be an integer")
         if size < 0:
             raise ValueError("Size must be >= 0")
+
         self.__size = size
