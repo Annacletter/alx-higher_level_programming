@@ -5,20 +5,13 @@ Module defining a Square class that inherits from Rectangle
 
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
     """
     Square - a class representing a square, inherits from Rectangle
     """
     def __init__(self, size, x=0, y=0, id=None):
-        """
-        Constructor for Square objects.
-        
-        Args:
-            size (int): Size of the square.
-            x (int, optional): X-coordinate position. Defaults to 0.
-            y (int, optional): Y-coordinate position. Defaults to 0.
-            id (int, optional): Unique identifier. Defaults to None.
-        """
+        """Constructor for Square objects"""
         super().__init__(size, size, x, y, id)
 
     @property

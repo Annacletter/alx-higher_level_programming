@@ -6,6 +6,7 @@ import os
 import csv
 import turtle
 
+
 class Base:
     """Represents the base class with a private class attribute"""
     __nb_objects = 0
@@ -97,9 +98,8 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
-        """Returns a list of instances depending on the class type from a CSV file
+        """Return instances depending on the type from CSV file"""
 
-        Reads from '<cls.__name__>.csv'"""
         file_name = cls.__name__ + ".csv"
         try:
             with open(file_name, 'r', newline="") as csvfile:
@@ -116,7 +116,8 @@ class Base:
 
     @staticmethod
     def draw(list_rectangles, list_squares):
-        """Opens a window and draws all the Rectangles and Squares using Turtle graphics"""
+        """draws all the Rectangles and Square"""
+
         my_turtle = turtle.Turtle()
         my_turtle.shape("turtle")
         my_turtle.pensize(2)

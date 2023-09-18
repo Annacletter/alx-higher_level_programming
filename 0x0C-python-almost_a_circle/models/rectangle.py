@@ -1,17 +1,19 @@
 #!/usr/bin/python3
-"""This script defines the Base class and provides methods for working with objects"""
+"""define Base class and provides methods for working with objects"""
 
 import json
 import os
 import csv
 import turtle
 
+
 class Base:
-    """Base class representing objects with a private class attribute"""
+
+    """Base class showing objects with a private class attribute"""
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """Initialize the Base object with an optional 'id' parameter"""
+        """starts the Base object with an optional 'id' parameter"""
 
         if id is not None:
             self.id = id
@@ -21,8 +23,7 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """Static method that returns the JSON string representation
-        of a list of dictionaries"""
+        """Static method returns the JSON string"""
 
         if list_dictionaries is None or list_dictionaries == []:
             return "[]"
@@ -30,8 +31,7 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """Class method that writes the JSON string representation of
-        a list of objects to a file"""
+        """Class method writes the JSON string"""
 
         file_name = "{}.json".format(cls.__name__)
         with open(file_name, 'w', encoding='utf-8') as f:
@@ -45,7 +45,7 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        """Parse a JSON string and return a list of dictionaries"""
+        """Parse a JSON string and return list of dictionaries"""
 
         if json_string is None or json_string == "":
             return []
@@ -53,7 +53,7 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        """Create an instance with attributes set based on a dictionary"""
+        """Create an instance with attributes"""
 
         if cls.__name__ == "Rectangle":
             instance = cls(3, 6)
@@ -116,7 +116,7 @@ class Base:
 
     @staticmethod
     def draw(list_rectangles, list_squares):
-        """Open a window and draw all the Rectangles and Squares using Turtle graphics"""
+        """draw all the Rectangles and Squares Turtle graphics"""
 
         my_turtle = turtle.Turtle()
         my_turtle.shape("turtle")
@@ -151,4 +151,3 @@ class Base:
                 my_turtle.fd(s.size)
                 my_turtle.rt(90)
                 my_turtle.ht()
-

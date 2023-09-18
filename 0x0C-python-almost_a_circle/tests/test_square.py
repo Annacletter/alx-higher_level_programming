@@ -638,8 +638,10 @@ class TestSquare_to_dictionary(unittest.TestCase):
 
     def test_to_dictionary_arg(self):
         s = Square(10, 10, 10, 10)
+
         with self.assertRaises(TypeError):
             s.to_dictionary(1)
+
 
 if __name__ == "__main__":
     unittest.main()
