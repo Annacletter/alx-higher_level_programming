@@ -1,5 +1,5 @@
 #!/usr/bin/node
-//reads prints the content of a file
+// reads prints the content of a file
 
 const fs = require('fs');
 const file = process.argv[2];
